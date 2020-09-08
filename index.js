@@ -8,10 +8,10 @@ const chalk = require('chalk');
 const boxen = require('boxen');
 const ora = require('ora');
 var figlet = require('figlet'); 
-const { overwrite, getName } = require('country-list');
 
 
 
+// call function api
 async function axiosGetHoliday() {
     try {
         return await axios.get("https://date.nager.at/api/v2/publicholidays/2020/BE");
@@ -20,6 +20,7 @@ async function axiosGetHoliday() {
     }
 }
 
+// 
 axiosGetHoliday()
     .then(holidays => {
 
